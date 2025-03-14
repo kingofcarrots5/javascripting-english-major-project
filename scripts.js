@@ -116,6 +116,7 @@ myEndofList = myList[Number(myListLength-1)]
 $("#response").html(myEndofList)
 */
 
+/*
 let userString, upperCaseMinusE, upperCasedString;
 userString = prompt("What do you want to UPPeRCASe?");
 upperCaseMinusE = function(string){
@@ -134,3 +135,60 @@ upperCaseMinusE = function(string){
 };
 upperCasedString = upperCaseMinusE(userString);
 $("#response").html(upperCasedString);
+*/
+
+/*
+//this is an alternative function for the above script
+upperCaseMinusE = function(string){
+    let result, stringArray;
+    result = ""; 
+    // Since forEach() only works on arrays, we have 
+    // to convert the string to an array:
+    stringArray = string.split("");
+    // Now we call forEach() on stringArray:
+    stringArray.forEach(function(letter){
+      if ( letter === "e" ) {
+        result = result + letter;
+      } else {
+        result = result + letter.toUpperCase();
+      }
+    }) // Note the parenthesis!
+    return result;
+  };
+  */
+
+  /*
+let leonardo, donatello, raphael, michelangelo, turtles, weapons;
+    leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
+    donatello = {name: "Donatello", color: "purple", weapon: "bo"};
+    raphael = {name: "Raphael", color: "red", weapon: "sai"};
+    michelangelo = {name: "Michelangelo", color: "blue", weapon: "nunchaku"};
+    turtles = [leonardo, donatello, raphael, michelangelo];
+    weapons = ""; 
+    turtles.forEach(function(turtle){
+        weapons = weapons + turtle.weapon + " ";
+      })
+$("#response").html(weapons);
+*/
+
+/*
+let leonardo, donatello, raphael, michelangelo, turtles, weapons;
+leonardo = {name: "Leonardo", color: "blue", weapon: "katana"};
+donatello = {name: "Donatello", color: "purple", weapon: "bo"};
+raphael = {name: "Raphael", color: "red", weapon: "sai"};
+michelangelo = {name: "Michelangelo", color: "blue", weapon: "nunchaku"};
+turtles = [leonardo, donatello, raphael, michelangelo];
+weapons = turtles.map(function(turtle){
+  return turtle.weapon;
+}).sort().join(", ");
+// weapons is now ["katana", "bo", "sai", "nunchaku"]
+$("#response").html(weapons);
+*/
+
+let turtlesWithSplinter, reversedTurtlesWithoutSplinter;
+turtlesWithSplinter = ["Leonardo", "Donatello", "Raphael", "Michelangelo", "Splinter"];
+reversedTurtlesWithoutSplinter = turtlesWithSplinter.filter(function(turtle){
+    console.log(turtle);
+    return turtle !== "Splinter";
+}).reverse();
+$("#response").html(reversedTurtlesWithoutSplinter);
