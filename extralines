@@ -11,6 +11,8 @@ for (let i = 1; i < userInput; i = i + 1 )
 }
 $("#response").append("<br />" + "Actually, figure it out yourself, you cheater.")
 
+<script src="https://code.jquery.com/jquery-3.2.1.min.js"></script>
+<script src="C:\Users\La Compu\OneDrive - UCB-O365\Documents\Java\jquery-3.7.1.js"></script>
 
 
 
