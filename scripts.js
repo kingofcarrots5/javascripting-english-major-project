@@ -83,7 +83,7 @@ arrayOfStrings = ["a", "b", "c", "fuck"];
 $("#response").html(arrayOfStrings.length)
 */
 
-
+/*
 let  myHabaneroSauceSquirts, myBurritoObject;
 myHabaneroSauceSquirts = 1;
 myBurritoObject = {
@@ -105,3 +105,32 @@ myBurritoObject = {
     myBurritoObject.habaneroSauceSquirts +
     " squirts of habanero.");
   myBurritoObject.spiciness();
+  */
+
+/*
+//this sets an array, and then displays the last item in the array. NOTE that [] is how you set an array
+let myList
+myList = ["1", "3", "5", "33", "12", "Pilar"]
+myListLength = myList.length;
+myEndofList = myList[Number(myListLength-1)]
+$("#response").html(myEndofList)
+*/
+
+let userString, upperCaseMinusE, upperCasedString;
+userString = prompt("What do you want to UPPeRCASe?");
+upperCaseMinusE = function(string){
+  let result;
+  result = ""; 
+  for ( let i = 0; i < string.length ; i = i + 1 ) {
+    let letter;
+    letter = string[i];
+    if ( letter === "e" ) {
+        result = result + letter;
+    } else {
+      result = result + letter.toUpperCase();
+    }
+  }
+  return result;
+};
+upperCasedString = upperCaseMinusE(userString);
+$("#response").html(upperCasedString);
